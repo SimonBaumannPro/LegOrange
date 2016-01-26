@@ -1,0 +1,168 @@
+body {
+	padding: 0;
+    margin: 0;         
+    width:5000px;
+    height:5000px;
+    background: url(lego_orange_tile.png) repeat;
+    /*
+	background-blend-mode: multiply;
+    background-color: #F90;
+    */
+}
+  
+#baseplate {
+	padding: 0;
+    margin: 0;         
+    cursor:pointer;
+}
+
+.brick {
+    cursor: pointer;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    z-index: 10;
+    border-radius: 20px;
+    background: url(lego_brick_white.png) no-repeat;
+    background-blend-mode: multiply;
+}
+
+.white {
+	background-color: white;
+}
+
+.black {
+    background-color: #666;
+}
+
+.blue {
+    background-color: #0048aa;
+}
+
+.red {
+    background-color: #f40026;
+}
+
+.yellow {
+    background-color: #ffdc00;
+}
+
+.green {
+    background-color: #008a40;
+}
+
+.brown {
+    background-color: #694027;
+}
+    
+.options{
+    cursor:move;
+    position:fixed;
+    text-align: right;
+    padding:0px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    z-index: 100;
+    box-shadow: 3px 3px 10px 0px #000000;
+}
+
+#tools {
+    left: 20px;
+    top: 20px;
+    text-align: center;
+    width: auto !important;;
+    height: auto !important;;
+}
+
+#qrcode_box {
+    right: 20px;
+    bottom: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+#qrcode_div {
+    margin: 10px;
+}
+
+#qrcode_desc {
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+    cursor: pointer;
+    right: 5px;
+    top: 5px;
+}
+    
+    
+.button, .little_button {
+    cursor: pointer;
+}
+
+
+#colors {
+    width: 100%;
+    text-align: center;
+}
+
+#colors .brick {
+    cursor: pointer;
+    position: inherit;
+    display: inline-block;
+}
+
+#colors .active {
+    border: 5px solid black;
+}
+
+hr{
+    margin:0px;
+}
+
+.owner {
+}
+
+.view_owner {
+    border: 2px solid black;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+
+#simple_login {
+    top:20px;
+    left:200px;
+}
+
+#simple_register {
+    top:200px;
+    left:200px;
+}
+
+.error {
+    font-weight: bold;
+    color: red;
+}
+
+
+#preview_box {
+    right: 20px;
+    top: 20px;
+}
+
+#preview_div {
+    background-color: #F60;
+    padding: 0;
+    margin: 0;         
+    width:250px;
+    height:250px;
+}
+
+.preview_brick {
+    width:1px;
+    z-index: 10;
+    height:1px;
+    position: absolute;
+}
