@@ -1,0 +1,25 @@
+{
+  "name": "legorange",
+  "version": "1.0.0",
+  "description": "Application LegOrange by WebCom",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.5",
+    "webcom": "^0.2.3",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonBaumannPro/LegOrange.git"
+  },
+  "author": "Simon Baumann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonBaumannPro/LegOrange/issues"
+  },
+  "homepage": "https://github.com/SimonBaumannPro/LegOrange#readme"
+}
