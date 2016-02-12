@@ -1,9 +1,9 @@
 body {
 	padding: 0;
     margin: 0;         
-    width:5000px;
-    height:5000px;
-    background: url(lego_orange_tile.png) repeat;
+    width:1000px;
+    height:500px;
+    background: url(../images/lego_orange_tile.png) repeat;
     /*
 	background-blend-mode: multiply;
     background-color: #F90;
@@ -23,7 +23,7 @@ body {
     position: absolute;
     z-index: 10;
     border-radius: 20px;
-    background: url(lego_brick_white.png) no-repeat;
+    background: url(../images/lego_brick_white.png) no-repeat;
     background-blend-mode: multiply;
 }
 

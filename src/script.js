@@ -2,7 +2,7 @@ require('./assets/styles/style.css');
 
 $(window).load(function (){
 
-  var webcom_url=window.location.protocol+"//"+window.location.host+"/base/legorange";
+  var webcom_url=__WEBCOM_SERVER__+"/base/legorange";
   var bricks={};
   var preview_bricks={};
   var last_move="";

@@ -1,0 +1,26 @@
+{
+  "name": "legorange",
+  "description": "Application LegOrange by WebCom",
+  "main": "webpack.config.js",
+  "authors": [
+    "Simon Baumann"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/SimonBaumannPro/LegOrange",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcom": "^0.2.3"
+  },
+  "devDependencies": {
+    "jquery-ui": "^1.11.4",
+    "jquery.ui.touch-punch.dk": "^0.3.3",
+    "jquery-qrcode": "jquery.qrcode#^0.12.0",
+  }
+}
