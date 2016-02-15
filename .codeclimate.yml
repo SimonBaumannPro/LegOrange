@@ -1,0 +1,12 @@
+languages:
+  JavaScript: true
+ratings:
+  paths:
+  - "**.js"
+engines:
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+  fixme:
+    enabled: true
