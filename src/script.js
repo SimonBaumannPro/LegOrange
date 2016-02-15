@@ -1,4 +1,5 @@
 require('./assets/styles/style.css');
+require('../node_modules/font-awesome/css/font-awesome.min.css');
 
 $(window).load(function (){
 

@@ -1,5 +1,4 @@
 
-
 const path = require('path');
 const process = require('process');
 const webpack = require('webpack');
@@ -41,17 +40,10 @@ const config = {
 	module: {
 		loaders: [
 			{ test: /\.js/, loaders: ['babel'], exclude: /node_modules/ },
-			//{ test: /\.less$/, loader: 'style-loader!css-loader?sourceMap!less-loader?sourceMap'},
-			//{ test: /\.css$/, loader: 'style-loader!css-loader?sourceMap' },
 			{ test: /\.png$/, loader: 'url-loader?mimetype=image/png'},
-			{ test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-              loader: 'url-loader?limit=10000&minetype=application/font-woff' },
-            { test: /\.(ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-              loader: 'url-loader?limit=10000&mimetype=application/octet-stream' },
-            { test: /\.(eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-              loader: 'file' },
-            { test: /\.(svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-              loader: 'url-loader?limit=10000&mimetype=image/svg+xml'}		
+			{ test: /\.(eot|woff|woff2|ttf|svg|)(\?\S*)?$/,
+			  loader: 'url?limit=100000&name=[name].[ext]'
+			}	
 		],
 		noParse: [
 			/react(:?\.min)?\.js$/,
@@ -74,14 +66,6 @@ const config = {
 			__NAMESPACE__: JSON.stringify(process.env.NAMESPACE || ''),
 			__DEVTOOLS__: process.env.NODE_ENV !== 'production'
 		})
-		//new webpack.optimize.OccurenceOrderPlugin(),
-		//new webpack.optimize.DedupePlugin(),
-		//new webpack.HotModuleReplacementPlugin(),
-		//new webpack.optimize.UglifyJsPlugin(),
-		
-		//new webpack.ResolverPlugin(
-	    //   new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
-	    //)
 	],
 	progress: true,
 	target: 'web'
