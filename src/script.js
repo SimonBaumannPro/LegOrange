@@ -1,9 +1,9 @@
 require('./assets/styles/style.css');
-require('../node_modules/font-awesome/css/font-awesome.min.css');
+//require('../node_modules/font-awesome/css/font-awesome.min.css');
 
 $(window).load(function (){
 
-  var webcom_url=__WEBCOM_SERVER__+"/base/legorange";
+  var webcom_url=__WEBCOM_SERVER__+"/base/"+__NAMESPACE__;
   var bricks={};
   var preview_bricks={};
   var last_move="";
@@ -270,13 +270,7 @@ $(window).load(function (){
     });
   }
 
-  $("#qrcode_div").qrcode({
-    "color": "#3a3",
-    "text": window.location.href
-  });
-
   if (! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    toggle_opt("qrcode");
     toggle_opt("preview");
 
     $("body").on('mousedown', function(e){

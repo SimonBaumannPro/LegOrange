@@ -8,10 +8,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = {
 	entry: {
 		vendor: [
-				 'jquery-ui',
 				 'react-dom',
-				 'jquery-touch',
-				 'jquery-qrcode',
+				 'font-awesome',
 				 'imports?exports=>false&module=>false!react',
 				 'imports?exports=>false&module=>false!jquery',
 				 'imports?exports=>false&module=>false!webcom'
@@ -25,15 +23,12 @@ const config = {
 	},
 	resolve: {
     	root: __dirname,
-    	modulesDirectories: ['bower_components', 'node_modules'],
         alias: {
         	'webcom': 'webcom/webcom.js',
         	react: 'react/dist/react.min.js',
         	jquery: 'jquery/dist/jquery.min.js',
-        	'jquery-ui': 'jquery-ui/jquery-ui.min.js',
 			'react-dom': 'react-dom/dist/react-dom.min.js',
-        	'jquery-qrcode': 'jquery-qrcode/dist/jquery.qrcode.min.js',
-        	'jquery-touch': 'jquery.ui.touch-punch.dk/jquery.ui.touch-punch.dk.js'
+			'font-awesome': 'font-awesome/css/font-awesome.min.css',
         },
         extensions: ["", ".webpack.js", ".web.js", ".js", ".css", ".min.css"]
     },
@@ -63,8 +58,7 @@ const config = {
 		new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
 		new webpack.DefinePlugin({
 			__WEBCOM_SERVER__: JSON.stringify(process.env.WS_SERVER || 'https://webcom.orange.com'),
-			__NAMESPACE__: JSON.stringify(process.env.NAMESPACE || ''),
-			__DEVTOOLS__: process.env.NODE_ENV !== 'production'
+			__NAMESPACE__: JSON.stringify(process.env.NAMESPACE || 'legorange')
 		})
 	],
 	progress: true,
@@ -86,7 +80,7 @@ if (process.env.NODE_ENV !== 'production') {
 	config.plugins = config.plugins.concat([
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new webpack.optimize.DedupePlugin(),
-		//new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.UglifyJsPlugin(),
 		new ExtractTextPlugin('[name].css')
 	]);
 	config.module.loaders = config.module.loaders.concat([
