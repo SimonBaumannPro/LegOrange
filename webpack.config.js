@@ -80,7 +80,7 @@ if (process.env.NODE_ENV !== 'production') {
 	config.plugins = config.plugins.concat([
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new webpack.optimize.DedupePlugin(),
-		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}),
 		new ExtractTextPlugin('[name].css')
 	]);
 	config.module.loaders = config.module.loaders.concat([
