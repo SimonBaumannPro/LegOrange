@@ -4,16 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ajoute ta brique !</title>
   </head>
-
   <body style="-moz-user-select: none;" unselectable="on">
     <!-- A ajouter pour que le clic fonctionne sur iphone/ipad -->
-    <div id="baseplate"></div>
-    <div id="preview_box"  opt="preview" class="options">
+    <div class="baseplate"></div>
+    <div class="preview_box options" opt="preview" >
       <i class="fa fa-close close"></i>
-      <div id="preview_div">
-      </div>
+      <div id="preview_div"></div>
     </div>
-    <div id="simple_login" class="options" style="display:none">
+    <div class="simple_login options" style="display:none">
       Merci de vous identifier<hr/>
       <span class="error" id="login_error"></span><br/>
       Identifiant (e-mail) : <input type="text" id="user_id"/><br/>
@@ -23,7 +21,7 @@
       <br/>
       <a href="#" id="register">Créer un nouveau  compte</a>
     </div>
-    <div id="simple_register" class="options" style="display:none">
+    <div class="simple_register options" style="display:none">
       Merci de renseigner les champs suivants<hr/>
       <span class="error" id="register_error"></span><br/>
       Identifiant (e-mail) : <input type="text" id="register_user_id"/><br/>
@@ -32,7 +30,7 @@
       <button class="fa fa-2x fa-close cancel" title="Annuler"></button>
       <button id="register_submit" class="fa fa-2x fa-check" title="Valider"></button>
     </div>
-    <div id="tools" class="options">
+    <div class="tools options">
       <span id="bricks_count">...</span><hr/>
       <div id="connect">
     	  Connexion
@@ -48,8 +46,12 @@
       <span id="draw" class="fa-stack fa-lg button fa-2x">
      	   <i class="fa fa-square fa-stack-2x"></i>
   	     <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+      </span>
+      <span id="erase" class="fa-stack fa-lg button fa-2x">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-eraser fa-stack-1x"></i>
       </span><br/>
-      <div id="colors">
+      <div class="colors">
       	<div class="brick white active"></div><br/>
       	<div class="brick green"></div><br/>
       	<div class="brick red"></div><br/>
@@ -58,10 +60,6 @@
       	<div class="brick yellow"></div><br/>
       	<div class="brick brown"></div>
       </div>
-      <span id="erase" class="fa-stack fa-lg button fa-2x">
-  	    <i class="fa fa-square-o fa-stack-2x"></i>
-  	    <i class="fa fa-eraser fa-stack-1x"></i>
-      </span>
       <span id="preview" class="fa-stack fa-lg little_button">
      	  <i class="fa fa-square-o fa-stack-2x"></i>
   	    <i class="fa fa-th fa-stack-1x fa"></i>

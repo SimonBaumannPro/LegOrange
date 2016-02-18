@@ -1,5 +1,4 @@
 require('./assets/styles/style.css');
-//require('../node_modules/font-awesome/css/font-awesome.min.css');
 
 $(window).load(function (){
 
@@ -166,7 +165,7 @@ $(window).load(function (){
         $("#disconnect").show();
         $("#erase").show();
         $("#draw").show();
-        $("#colors").show();
+        $(".colors").show();
       } else {
         console.log("not authenticated");
         authData=null;
@@ -175,7 +174,7 @@ $(window).load(function (){
         $("#disconnect").hide();
         $("#erase").hide();
         $("#draw").hide();
-        $("#colors").hide();
+        $(".colors").hide();
       }
     }
   }
@@ -191,7 +190,7 @@ $(window).load(function (){
           rememberMe : true
         }, checkAuth);
       } else {
-        $("#login_error").html("Veuillez renseigner votre mot de passe");
+        $(".login_error").html("Veuillez renseigner votre mot de passe");
       }
     } else {
       $("#login_error").html("Adresse e-mail invalide");
@@ -201,7 +200,7 @@ $(window).load(function (){
   $(".login").click(function(){
     var provider=$(this).attr("provider");
     if (provider=="simple") {
-      $("#simple_login").show();
+      $(".simple_login").show();
     } else {
       //TODO
     }        
@@ -224,8 +223,8 @@ $(window).load(function (){
 
   $(".close").click(function() {toggle_opt($(this).parent().attr("opt"))});
    
-  $("#colors .brick").click(function(e) {
-    $("#colors .brick").removeClass("active");
+  $(".colors .brick").click(function(e) {
+    $(".colors .brick").removeClass("active");
     $(this).addClass("active");
     color=$(this).attr('class').replace(/\s*(brick|active)\s*/g, '');
   });
@@ -240,11 +239,11 @@ $(window).load(function (){
     if (sub_button.hasClass("fa-square-o")) {
       $("#"+opt_name+" :nth-child(1)").removeClass("fa-square-o").addClass("fa-square");
       $("#"+opt_name+" :nth-child(2)").removeClass("fa-inverse").addClass("fa-inverse");
-      $("#"+opt_name+"_box").show();
+      $("."+opt_name+"_box").show();
     } else {
       $("#"+opt_name+" :nth-child(1)").removeClass("fa-square").addClass("fa-square-o");
       $("#"+opt_name+" :nth-child(2)").removeClass("fa-inverse");
-      $("#"+opt_name+"_box").hide();
+      $("."+opt_name+"_box").hide();
     }
   }
     
@@ -255,9 +254,9 @@ $(window).load(function (){
   function change_mode(new_mode) {
     mode=new_mode;
     if (mode=="draw")
-      $("#colors").show();
+      $(".colors").show();
     else
-      $("#colors").hide();
+      $(".colors").hide();
 
     ["draw", "erase"].forEach(function(action){
       if (action == mode) {
