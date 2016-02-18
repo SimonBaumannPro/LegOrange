@@ -1,18 +1,16 @@
 {
   "name": "legorange",
   "version": "1.0.0",
-  "description": "Application LegOrange by WebCom",
+  "description": "Application LegOrange using webcom",
   "main": "",
   "scripts": {
     "start": "webpack-dev-server --hot --host 0.0.0.0",
     "build": "cross-env NODE_ENV=production webpack --progress --colors -p",
     "serve": "cross-env NODE_ENV=production webpack-dev-server",
     "semantic-release": "semantic-release pre  && semantic-release post"
-
   },
   "dependencies": {
     "font-awesome": "^4.5.0",
-    "font-awesome-webpack": "0.0.4",
     "jquery": "~2.2.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
