@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ajoute ta brique !</title>
+  <link href="/LegOrange/vendor.css" rel="stylesheet"><link href="/LegOrange/script.css" rel="stylesheet"></head>
+  <body style="-moz-user-select: none;" unselectable="on">
+    <!-- A ajouter pour que le clic fonctionne sur iphone/ipad -->
+    <div class="baseplate"></div>
+    <div class="preview_box options" opt="preview" >
+      <i class="fa fa-close close"></i>
+      <div id="preview_div"></div>
+    </div>
+    <div class="simple_login options" style="display:none">
+      Merci de vous identifier<hr/>
+      <span class="error" id="login_error"></span><br/>
+      Identifiant (e-mail) : <input type="text" id="user_id"/><br/>
+      Mot de passe : <input type="password" id="password"/><br/>
+      <button class="fa fa-2x fa-close cancel" title="Annuler"></button>
+      <button id="login_submit" class="fa fa-2x fa-check" title="Valider"></button><br/>
+      <br/>
+      <a href="#" id="register">Créer un nouveau  compte</a>
+    </div>
+    <div class="simple_register options" style="display:none">
+      Merci de renseigner les champs suivants<hr/>
+      <span class="error" id="register_error"></span><br/>
+      Identifiant (e-mail) : <input type="text" id="register_user_id"/><br/>
+      Mot de passe : <input type="password" id="register_password1"/><br/>
+      Confirmation Mot de passe : <input type="password" id="register_password2"/><br/>
+      <button class="fa fa-2x fa-close cancel" title="Annuler"></button>
+      <button id="register_submit" class="fa fa-2x fa-check" title="Valider"></button>
+    </div>
+    <div class="tools options">
+      <span id="bricks_count">...</span><hr/>
+      <div id="connect">
+    	  Connexion
+        <br/>
+    	  <button class="login fa fa-2x fa-user" provider="simple" title="Compte local"></button><br/>
+      	<hr/>
+      </div>
+      <div id="disconnect">
+  	    <span id="user_name"></span><br/>
+  	    <label for="view_my_bricks">Mes briques </label><input type="checkbox" id="view_my_bricks" value="1" /><br/>
+  	    <button id="logout">Déconnexion</button><hr/>
+      </div>
+      <span id="draw" class="fa-stack fa-lg button fa-2x">
+     	   <i class="fa fa-square fa-stack-2x"></i>
+  	     <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+      </span>
+      <span id="erase" class="fa-stack fa-lg button fa-2x">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-eraser fa-stack-1x"></i>
+      </span><br/>
+      <div class="colors">
+      	<div class="brick white active"></div><br/>
+      	<div class="brick green"></div><br/>
+      	<div class="brick red"></div><br/>
+      	<div class="brick black"></div><br/>
+      	<div class="brick blue"></div><br/>
+      	<div class="brick yellow"></div><br/>
+      	<div class="brick brown"></div>
+      </div>
+      <span id="preview" class="fa-stack fa-lg little_button">
+     	  <i class="fa fa-square-o fa-stack-2x"></i>
+  	    <i class="fa fa-th fa-stack-1x fa"></i>
+      </span><br/>
+    </div>
+  <script type="text/javascript" src="/LegOrange/vendor.bundle.js"></script><script type="text/javascript" src="/LegOrange/bundle.js"></script></body>
+</html>
