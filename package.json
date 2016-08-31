@@ -15,7 +15,7 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "webcom": "^0.2.3",
-    "webcom-reach": "^1.0.4"
+    "webcom-reach": "^2.2.4"
   },
   "devDependencies": {
     "babel": "^6.5.1",
