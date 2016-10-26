@@ -21,7 +21,7 @@
     "babel": "^6.5.1",
     "babel-core": "^6.5.1",
     "babel-eslint": "^4.1.8",
-    "babel-loader": "^6.2.2",
+    "babel-loader": "^6.2.6",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-plugin-transform-react-constant-elements": "^6.5.0",
     "babel-plugin-transform-react-inline-elements": "^6.5.0",
