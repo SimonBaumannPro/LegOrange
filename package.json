@@ -30,7 +30,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.0",
     "babel-preset-stage-1": "^6.5.0",
-    "bower": "~1.7.7",
+    "bower": "~1.8.0",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.1",
     "eslint": "^1.10.3",
